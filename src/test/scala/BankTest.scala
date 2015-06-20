@@ -1,9 +1,9 @@
-import org.scalatest.Spec
-import org.scalatest.matchers.MustMatchers
+import org.scalatest.FunSpec
+import org.scalatest.MustMatchers
 
 import com.example.Bank
 
-class BankSpec extends Spec with MustMatchers {
+class BankSpec extends FunSpec with MustMatchers {
   describe("simple bank") {
     val bank = new Bank
 
@@ -22,7 +22,7 @@ class BankSpec extends Spec with MustMatchers {
     }
 
     it("should not allow account to be overdrawn") {
-      evaluating { bank.withdraw(60.0) } must produce [IllegalArgumentException]
+      an [IllegalArgumentException] must be thrownBy { bank.withdraw(60.0) }
     }
   }
 }
