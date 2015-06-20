@@ -2,8 +2,8 @@
 
 Get started with Scala and use Intellij IDEA (tested on 11)
 
-* Scala 2.9.1
-* ScalaTest 1.6.1
+* Scala 2.11.6
+* ScalaTest 2.2.4
 
 ## Using
 
